@@ -1,6 +1,5 @@
 # FastaCon
 
-Description:
 This script will concatenate multiple fasta files into a new one, called "concatenated.fas". 
 The samples in the fasta files don't need to be in the same order, and each of them may contain a
 subset of the samples. If a sample is missing from a fasta file it will be filled in with "N"s x length 
@@ -12,9 +11,10 @@ Input files:
 1) fasta formated files in the folder "fasta_files" 
 
 2) a list of all taxa names included in the fasta files, called "taxa_order.txt" and it should be placed in the
-directory "fasta_files". The concatenated sequences will be written in the concatenated.fas file according to "taxa_order.txt"
-If "taxa_order.txt" is missing the taxa names will be retrieved from the fasta files found in the "fasta_files" folder. 
-The list of taxa will then be written in the "taxa_names_guessed_from_fasta_files.fas" file in the "Con_V3" directory
+directory "fasta_files" (check examples for format). The concatenated sequences will be written in the concatenated.fas 
+file according to "taxa_order.txt". If "taxa_order.txt" is missing the taxa names will be retrieved from the fasta files 
+found in the "fasta_files" folder. The list of taxa will then be written in the "taxa_names_guessed_from_fasta_files.fas"
+file in the "Con_V3" directory
 
 Prerequisites:
 
@@ -54,15 +54,15 @@ Example:
 
 To run the example just copy all the files from "example_files" to "fasta_files" and follow the guidlines above.
 
-*** ena.fasta --> it does not matter if the sequences are in one or multiple lines
+*** one.fasta --> it does not matter if the sequences are in one or multiple lines
 
-*** duo.fasta --> it does not matter if there are empty lines between the entries, or between the taxon name and the sequence 
+*** two.fasta --> it does not matter if there are empty lines between the entries, or between the taxon name and the sequence 
 
-*** tria.fasta --> the letters may be capital or small (any letters are ok)
+*** three.fasta --> the letters may be capital or small (any letters are ok)
 
-*** tessera.fasta --> it is ok if any or all sequences are missing (empty file), they will be replaced with 'N'x alignment length 
+*** four.fasta --> it is ok if any or all sequences are missing (empty file), they will be replaced with 'N'x alignment length 
 
-*** the sequences may be in whatever order in each fasta file, as long as every name is the same throughout all files
-	and in the taxa_order.txt (check example for format)
+*** the sequences may be in whatever order in each fasta file, as long as the same name are used throughout all files
+(fasta files and taxa_order.txt file)
 
 For any problems, please contact me at k.pashalia@gmail.com 
